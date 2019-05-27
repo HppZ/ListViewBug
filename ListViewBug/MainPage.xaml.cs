@@ -29,6 +29,9 @@ namespace ListViewBug
             var source = new List<string>();
             {
                 source.Add(
+                    @"http://pic8.iqiyipic.com/image/20181030/56/d3/v_109324118_m_601_m1_284_160.jpg");
+
+                source.Add(
                     @"C:\Users\hp\AppData\Local\Packages\5401eb92-f593-4f07-9653-7e7d720d694d_frh6kvfkqjj2p\LocalState\thumbnails\85hdWh8KtR4.jpg");
 
                 source.Add(
