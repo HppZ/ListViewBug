@@ -8,38 +8,71 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-<Page.Resources>
-    <Style TargetType="ListViewItem">
-        <Setter Property="Margin"
+    <Page.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="Margin"
                 Value="0 0 10 0" />
-        <Setter Property="IsTabStop"
+            <Setter Property="IsTabStop"
                 Value="False" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <ContentPresenter />
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <ContentPresenter />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="itemRootStyle" TargetType="GridViewItem">
+            <Setter Property="Padding" Value="0"></Setter>
+            <Setter Property="Margin" Value="0"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        </Style>
     </Page.Resources>
 
     <Grid>
         <ListView x:Name="ListView1" VerticalAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Height="210" Width="235" Background="Aquamarine">
-                        <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Image 
+                    <UserControl>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid  Margin="0,0,0,18">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="17" />
+                                </Grid.RowDefinitions>
+                                <TextBlock  MinHeight="22"  
+                                        Margin="0,0,0,10" 
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Bottom"
+                                        FontSize="20"
+                                        Text="1小时前"
+                                        ></TextBlock>
+                                <Grid Height="17" HorizontalAlignment="Center" Grid.Row="1"></Grid>
+                            </Grid>
+
+                            <GridViewItem Grid.Row="1" Height="210" Width="235" Style="{StaticResource itemRootStyle}">
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Image 
                                Source="{Binding}" 
                                HorizontalAlignment="Center" 
                                VerticalAlignment="Center"
                                Stretch="UniformToFill"></Image>
-                        <TextBlock Grid.Row="1" Height="70" HorizontalAlignment="Right">456</TextBlock>
-                    </Grid>
+                                    <TextBlock Grid.Row="1" Height="70" HorizontalAlignment="Right">456</TextBlock>
+                                </Grid>
+                            </GridViewItem>
+                        </Grid>
+                    </UserControl>
                 </DataTemplate>
             </ListView.ItemTemplate>
             <ListView.ItemsPanel>
