@@ -28,12 +28,16 @@ namespace ListViewBug
 
             var source = new List<string>();
             {
-                
                 source.Add(
                     @"C:\Users\hp\AppData\Local\Packages\5401eb92-f593-4f07-9653-7e7d720d694d_frh6kvfkqjj2p\LocalState\thumbnails\85hdWh8KtR4.jpg");
 
                 source.Add(
                     @"C:\Users\hp\AppData\Local\Packages\5401eb92-f593-4f07-9653-7e7d720d694d_frh6kvfkqjj2p\LocalState\thumbnails\4b3b3c1b-65d0-4e1e-8670-3de4b8024409.jpg");
+
+                source.Add(
+                    @"C:\Users\hp\AppData\Local\Packages\5401eb92-f593-4f07-9653-7e7d720d694d_frh6kvfkqjj2p\LocalState\thumbnails\85hdWh8KtR4.jpg");
+
+
                 source.Add(
                     @"C:\Users\hp\AppData\Local\Packages\5401eb92-f593-4f07-9653-7e7d720d694d_frh6kvfkqjj2p\LocalState\thumbnails\75121f0c-6376-4258-b828-1fe8effd9255.jpg");
                 source.Add(
