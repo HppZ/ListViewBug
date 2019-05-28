@@ -12,6 +12,7 @@
     <ListView x:Name="ListView1">
         <ListView.Header>
             <Border x:Name="root">
+                <!--<local:MyUserControl1 x:Name="Control1"></local:MyUserControl1>-->
             </Border>
         </ListView.Header>
 

@@ -25,19 +25,16 @@ namespace ListViewBug
         public MainPage()
         {
             this.InitializeComponent();
+
             Loaded += MainPage_Loaded;
         }
 
-        private MyUserControl1 _control1;
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            if (_control1 == null)
-            {
-                _control1 = new MyUserControl1();
-                _control1.Load();
-
-                root.Child = _control1;
-            }
+            // 下面这段放在 InitializeComponent 就会发生第一个Item 被截断的问题
+            var Control1 = new MyUserControl1();
+            Control1.Load();
+            root.Child = Control1;
         }
     }
 }
