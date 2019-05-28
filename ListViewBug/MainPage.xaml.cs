@@ -25,22 +25,19 @@ namespace ListViewBug
         public MainPage()
         {
             this.InitializeComponent();
+            Loaded += MainPage_Loaded;
+        }
 
-            var source = new List<string>();
-            for (int i = 0; i < 8; i++)
+        private MyUserControl1 _control1;
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (_control1 == null)
             {
-                if (i == 3)
-                {
-                    source.Add(@"C:\Users\hp\AppData\Local\Packages\5401eb92-f593-4f07-9653-7e7d720d694d_frh6kvfkqjj2p\LocalState\thumbnails\4b3b3c1b-65d0-4e1e-8670-3de4b8024409.jpg");
-                }
-                else
-                {
-                    source.Add(@"http://pic8.iqiyipic.com/image/20181030/56/d3/v_109324118_m_601_m1_284_160.jpg");
-                }
+                _control1 = new MyUserControl1();
+                _control1.Load();
+
+                root.Child = _control1;
             }
-
-            ListView1.ItemsSource = source;
-
         }
     }
 }
