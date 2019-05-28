@@ -55,7 +55,7 @@
             </GridViewItem>
         </DataTemplate>
     </UserControl.Resources>
-
+ 
     <uiKit:NonTouchScrollEnhancer x:Name="scollEnhancer" Grid.Row="1" Step="2" StepOffset="280" VerticalContentAlignment="Bottom" ScrollButtonHeight="210">
         <ListView x:Name="ListView1"
               Margin="0,30,0,0"
