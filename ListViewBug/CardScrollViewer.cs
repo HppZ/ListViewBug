@@ -52,7 +52,7 @@ namespace QYClient.UIKit
                 scrollViewer.VerticalScrollMode = ScrollMode.Disabled;
 
                 scrollViewer.HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden;
-                scrollViewer.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled;
+                scrollViewer.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled; // 它导致的
 
                 layout.PointerEntered += CardScrollViewer_PointerEntered;
                 layout.PointerMoved += CardScrollViewer_PointerMoved;
