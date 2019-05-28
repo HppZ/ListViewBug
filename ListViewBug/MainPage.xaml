@@ -60,14 +60,16 @@
                             <GridViewItem Grid.Row="1" Height="210" Width="235" Style="{StaticResource itemRootStyle}">
                                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <Grid.RowDefinitions>
-                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
                                         <RowDefinition Height="Auto"></RowDefinition>
                                     </Grid.RowDefinitions>
+                                  
                                     <Image 
                                Source="{Binding}" 
                                HorizontalAlignment="Center" 
                                VerticalAlignment="Center"
                                Stretch="UniformToFill"></Image>
+
                                     <TextBlock Grid.Row="1" Height="70" HorizontalAlignment="Right">456</TextBlock>
                                 </Grid>
                             </GridViewItem>

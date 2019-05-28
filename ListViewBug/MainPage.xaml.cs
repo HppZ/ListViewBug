@@ -27,7 +27,7 @@ namespace ListViewBug
             this.InitializeComponent();
 
             var source = new List<string>();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 8; i++)
             {
                 if (i == 3)
                 {
